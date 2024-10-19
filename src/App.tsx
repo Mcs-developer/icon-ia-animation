@@ -1,9 +1,21 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className={'main'}>
-      <div className={'icon-container'}>
+      <div className={`icon-container ${isHovered ? 'hovered' : 'not-hovered'}`} onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>
         <svg
           width="16"
           height="16"
