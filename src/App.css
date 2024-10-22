@@ -1,5 +1,11 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --size-container: 16px;
+  --size-container: 24px;
 }
 
 .main {
@@ -50,7 +56,7 @@
 
 .star-fill {
   transition: fill 300ms linear, transform 600ms ease-in 300ms;
-  transform-origin: var(--size-container) 5%;
+  transform-origin: calc(var(--size-container) - 8px) 5%;
 }
 
 .hovered .star-fill {
